@@ -5,6 +5,7 @@ import { QRCodeSVG } from "qrcode.react";
 import { Button } from "@/app/components/ui/button";
 import { Download, Share2, Plus, RefreshCw } from "lucide-react";
 import { motion } from "framer-motion";
+import { ShineBorder } from "@/app/components/magicui/shine-border";
 
 interface Ticket {
   id: string;
@@ -126,13 +127,20 @@ export default function TicketsPage() {
           {tickets.length > 0 ? (
             <div className="space-y-8">
               {tickets.map((ticket) => (
-                <motion.div 
+                <motion.div
                   key={ticket.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-white dark:bg-slate-900 rounded-xl shadow-lg overflow-hidden"
+                  className="bg-white dark:bg-slate-900 rounded-xl shadow-lg overflow-hidden relative"
                 >
-                  <div className="md:flex">
+                  <ShineBorder
+                    className="absolute inset-0"
+                    shineColor={["#3b82f6", "#8b5cf6"]} // Blue to Purple gradient
+                    borderWidth={2}
+                    duration={5}
+                  />
+                  {/* Content needs to be inside the motion.div but after ShineBorder */}
+                  <div className="md:flex relative z-10"> {/* Add relative and z-index to content */}
                     {/* QR code section */}
                     <div className="p-6 flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20">
                       <div className="bg-white p-4 rounded-lg shadow-md">
@@ -151,17 +159,17 @@ export default function TicketsPage() {
                         />
                       </div>
                     </div>
-                    
+
                     {/* Ticket info section */}
                     <div className="p-6 md:flex-1">
                       <div className={`px-3 py-1 rounded-full inline-block text-xs font-medium mb-4 ${
-                        ticket.isReferral 
+                        ticket.isReferral
                           ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
                           : "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400"
                       }`}>
                         {ticket.isReferral ? "Referral Pass" : "Full Access Pass"}
                       </div>
-                      
+
                       <h3 className="text-xl font-bold mb-2">Espektro 2025</h3>
                       <p className="text-gray-600 dark:text-gray-400 mb-1">Ticket ID: {ticket.id}</p>
                       <p className="text-gray-600 dark:text-gray-400 mb-4">
@@ -171,12 +179,12 @@ export default function TicketsPage() {
                           day: "numeric"
                         })}
                       </p>
-                      
+
                       <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
                         Present this QR code at the entrance for scanning and validation.
                         This ticket grants you access to all events at Espektro 2025.
                       </p>
-                      
+
                       <div className="flex flex-wrap gap-2">
                         <Button
                           onClick={() => downloadQRCode(ticket.id)}
@@ -187,7 +195,7 @@ export default function TicketsPage() {
                           <Download className="h-4 w-4 mr-1" />
                           Download
                         </Button>
-                        
+
                         <Button
                           onClick={() => {
                             if (navigator.share) {
@@ -207,7 +215,7 @@ export default function TicketsPage() {
                         </Button>
                       </div>
                     </div>
-                  </div>
+                  </div> {/* Close the inner content div */}
                 </motion.div>
               ))}
               
