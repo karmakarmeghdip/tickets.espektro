@@ -55,7 +55,7 @@ export default function TicketsPage() {
     }
 
     const serializer = new XMLSerializer();
-    let svgString = serializer.serializeToString(svgElement);
+    const svgString = serializer.serializeToString(svgElement);
 
     // Create an Image object
     const img = new Image();
