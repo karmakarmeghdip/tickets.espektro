@@ -1,16 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Espektro Tickets - Digital Ticketing Platform
+
+This project is a modern, web-based ticketing platform built with [Next.js](https://nextjs.org), designed to streamline and digitalize the entire event ticketing process.
+
+## The Need for Digitalization
+
+Traditional paper-based ticketing systems often suffer from inefficiencies, potential for fraud, and inconvenience for both organizers and attendees. Manual processes can lead to long queues, lost tickets, and difficulties in tracking attendance accurately. Espektro Tickets aims to solve these problems by providing a fully digital solution.
+
+## Features
+
+*   **Event Discovery:** Browse upcoming events with detailed descriptions, dates, and venues.
+*   **Secure User Authentication:** Easy and secure login/signup process for attendees.
+*   **Digital Ticket Purchase:** Seamless online ticket purchasing experience.
+*   **QR Code Generation:** Each ticket is issued with a unique QR code for secure validation.
+*   **Admin Dashboard:**
+    *   Event Management: Create, update, and manage event details.
+    *   Attendance Tracking: Real-time monitoring of attendee check-ins.
+    *   QR Code Scanning: Integrated QR scanner for quick and reliable ticket validation at the venue entrance.
+*   **Responsive Design:** Fully accessible on desktops, tablets, and mobile devices.
+
+## Benefits
+
+*   **Convenience:** Attendees can purchase and manage tickets from anywhere, anytime.
+*   **Security:** Reduces ticket fraud through unique QR codes and secure validation.
+*   **Efficiency:** Speeds up the check-in process and reduces administrative overhead for organizers.
+*   **Sustainability:** Eliminates the need for paper tickets, contributing to environmental conservation.
+*   **Data Insights:** Provides organizers with valuable data on sales and attendance.
 
 ## Getting Started
 
-First, run the development server:
+First, ensure you have Node.js and bun installed. Then, install the dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+bun install
+```
+
+Next, run the development server:
+
+```bash
 bun dev
 ```
 
