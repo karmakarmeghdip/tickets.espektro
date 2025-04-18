@@ -8,7 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Espektro - Ticketing System",
-  description: "Kalyani Government Engineering College's premier tech fest",
+  description: "Kalyani Government Engineering College's premier techno management cum cultural fest",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
