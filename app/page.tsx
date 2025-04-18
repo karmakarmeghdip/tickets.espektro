@@ -9,15 +9,20 @@ import { Button } from "./components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { AuroraText } from "@/app/components/magicui/aurora-text";
 import { InteractiveHoverButton } from "@/app/components/magicui/interactive-hover-button"; // Import the new button
+import { InteractiveGridPattern } from "@/app/components/magicui/interactive-grid-pattern"; // Import the grid pattern
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center">
+      <section className="relative h-[80vh] flex items-center overflow-hidden bg-white dark:bg-slate-950"> {/* Added background color */}
         <div className="absolute inset-0 z-0">
           {/* Add a background image or pattern here */}
-          <div className="w-full h-full bg-gradient-to-br from-blue-600/20 to-purple-600/20 dark:from-blue-900/40 dark:to-purple-900/40" />
+          <InteractiveGridPattern
+            squares={[50, 30]} // Adjust grid size as needed
+            className="opacity-50 dark:opacity-20 w-full" // Adjust opacity
+            squaresClassName="stroke-gray-400/30 dark:stroke-gray-600/30"
+          />
         </div>
         
         <div className="container mx-auto px-4 z-10">
@@ -26,7 +31,7 @@ export default function Home() {
               Espektro 2025
             </AuroraText>
             <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8">
-              The Annual Techfest of Kalyani Government Engineering College
+              The Annual Techno Management cum Cultural fest of <br/>Kalyani Government Engineering College
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
               Join us for an incredible journey of technology, innovation, and creativity. 
@@ -87,7 +92,7 @@ export default function Home() {
       </section>
       
       {/* Timeline Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-900 dark:to-slate-800">
+      <section className="py-16 bg-gray-50 dark:bg-slate-950"> {/* Updated background color */}
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-2 text-center">
