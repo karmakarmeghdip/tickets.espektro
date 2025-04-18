@@ -23,6 +23,7 @@
     "framer-motion": "^12.7.4",
     "html5-qrcode": "^2.3.8",
     "lucide-react": "^0.488.0",
+    "motion": "^12.7.4",
     "next": "15.3.0",
     "next-auth": "^4.24.11",
     "prisma": "^6.6.0",
