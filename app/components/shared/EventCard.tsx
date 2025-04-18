@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Clock, MapPin } from "lucide-react";
 import { Event } from "@/lib/data/events"; // Correct import path
 import Image from "next/image";
