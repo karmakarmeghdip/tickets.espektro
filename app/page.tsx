@@ -7,6 +7,8 @@ import EventCard from "./components/shared/EventCard"; // Changed to default imp
 import { EventTimeline } from "./components/shared/EventTimeline";
 import { Button } from "./components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { AuroraText } from "@/app/components/magicui/aurora-text";
+import { InteractiveHoverButton } from "@/app/components/magicui/interactive-hover-button"; // Import the new button
 
 export default function Home() {
   return (
@@ -20,11 +22,9 @@ export default function Home() {
         
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Espektro 2025
-              </span>
-            </h1>
+            <AuroraText className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
+              Espektro 2025
+            </AuroraText>
             <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8">
               The Annual Techfest of Kalyani Government Engineering College
             </p>
@@ -33,12 +33,13 @@ export default function Home() {
               Experience workshops, competitions, cultural performances, and more.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-center">
               <Link href="/transactions">
-                <Button className="text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all">
+                <InteractiveHoverButton
+                  className="px-6 py-3 text-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all rounded-xl border-none"
+                >
                   Get Espektro Pass
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                </InteractiveHoverButton>
               </Link>
               
               <Link href="/events">
