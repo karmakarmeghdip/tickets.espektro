@@ -19,7 +19,7 @@ import {
 } from "@/app/components/ui/select";
 import { Input } from "@/app/components/ui/input";
 import { Label } from "@/app/components/ui/label";
-import { Eye, EyeOff, Plus, Trash2 } from 'lucide-react';
+import { Eye, EyeOff, Plus } from 'lucide-react';
 import { Badge } from '@/app/components/ui/badge';
 
 // Define role types

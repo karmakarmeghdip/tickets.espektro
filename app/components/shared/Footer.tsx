@@ -38,7 +38,7 @@ export default function Footer() {
                         </div>
 
                         <div className="text-right">
-                            <p className="text-xl text-purple-400">KGEC's</p>
+                            <p className="text-xl text-purple-400">KGEC&apos;s</p>
                             <p className="text-5xl font-light bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Espektro</p>
                         </div>
                     </div>

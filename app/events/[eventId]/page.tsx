@@ -1,24 +1,23 @@
 "use client";
 
-import React from "react";
+import React, { use } from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarIcon, MapPin, Users, Clock, ArrowLeft, User, Phone, Share2 } from "lucide-react";
-import { events, Event } from "@/lib/data/events";
-import { clubs, Club } from "@/lib/data/clubs";
+import { events } from "@/lib/data/events";
+import { clubs } from "@/lib/data/clubs";
 import { Button } from "@/app/components/ui/button";
 import { Badge } from "@/app/components/ui/badge";
 
-export default function EventDetailPage({
-    params,
-}: {
-    params: { eventId: string } | Promise<{ eventId: string }>;
-}) {
-    // Handle params as a Promise using React.use()
-    // Cast params to any first to avoid TypeScript errors with Usable type
-    const unwrappedParams: any = React.use(params as any);
-    const eventId = unwrappedParams.eventId;
+/// Define the expected props type, potentially including a Promise
+interface EventDetailPageProps {
+    params: Promise<{ eventId: string }>;
+}
+
+export default function EventDetailPage(props: EventDetailPageProps) {
+    // Unwrap the params promise if necessary using React.use()
+    const { eventId } = use(props.params);
 
     // Find the event with the matching ID
     const event = events.find((e) => e.id === eventId);
