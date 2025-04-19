@@ -93,7 +93,7 @@ export const TextHoverEffect = ({
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.5" /* Increased stroke width */
+        strokeWidth="1" /* Increased stroke width */
         className="fill-transparent stroke-neutral-400 font-[helvetica] text-7xl font-bold dark:stroke-neutral-600" /* Adjusted stroke color for better visibility */
         style={{ opacity: hovered ? 0.8 : 0.1 }} /* Slightly visible when not hovered, more opaque on hover */
       >
@@ -105,7 +105,7 @@ export const TextHoverEffect = ({
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.5" /* Increased stroke width */
+        strokeWidth="1" /* Increased stroke width */
         className="fill-transparent stroke-neutral-500 font-[helvetica] text-7xl font-bold dark:stroke-neutral-500" /* Adjusted stroke color */
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
         animate={{
