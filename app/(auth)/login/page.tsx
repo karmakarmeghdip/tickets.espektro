@@ -20,7 +20,7 @@ export default function LoginPage() {
               <p className="text-white/90 mb-8">Sign in to access your tickets and manage your event experience.</p>
               <div className="relative w-full h-64">
                 <Image 
-                  src="/logo.png" 
+                  src="/espektro-logo-white.png" 
                   alt="Login illustration"
                   fill
                   className="object-contain"

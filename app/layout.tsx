@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Espektro - Ticketing System",
   description: "Kalyani Government Engineering College's premier techno management cum cultural fest",
   icons: {
-    icon: "/logo.png",
+    icon: "/espektro-logo-white.png",
   },
 };
 
