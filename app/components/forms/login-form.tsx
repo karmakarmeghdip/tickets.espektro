@@ -123,7 +123,7 @@ export default function LoginForm() {
 export function GoogleButton() {
   "use client";
   return <Button
-    onClick={() => authClient.signIn.social({ provider: "google" })}
+    onClick={() => authClient.signIn.social({ provider: "google", newUserCallbackURL: "/signup" })}
     className="flex items-center gap-2 w-full max-w-xs"
     variant="outline"
     size="lg"
