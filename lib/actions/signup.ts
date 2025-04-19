@@ -10,6 +10,7 @@ import {
   alumniProfile,
   visitorProfile
 } from "@/lib/db/user-schema";
+import { authClient } from "../auth-client";
 
 // Define the signup schema with Zod - removed email and password
 const signupSchema = z
@@ -82,6 +83,11 @@ const signupSchema = z
 type SignupFormData = z.infer<typeof signupSchema>;
 
 export async function signup(formData: FormData) {
+  const { data: session, error } = await authClient.getSession();
+  if (error) {
+    console.error("Error fetching session:", error);
+    return { success: false, message: "Session error: " + error.message };
+  }
   try {
     // Extract form data into a plain object
     const rawFormData: Record<string, any> = {};
@@ -106,7 +112,7 @@ export async function signup(formData: FormData) {
       // Create common user profile - no need to create auth user
       await tx.insert(userProfile).values({
         id: userProfileId,
-        userId: uuidv4(), // Generate a placeholder user ID
+        userId: session.user.id,
         phoneNumber: validatedData.phoneNumber,
         individualType: validatedData.individualType,
         createdAt: now,
