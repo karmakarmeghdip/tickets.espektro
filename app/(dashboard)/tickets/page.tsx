@@ -6,6 +6,7 @@ import { Button } from "@/app/components/ui/button";
 import { Download, Share2, Plus, RefreshCw } from "lucide-react";
 import { motion } from "framer-motion";
 import { ShineBorder } from "@/app/components/magicui/shine-border";
+import Link from 'next/link';
 
 interface Ticket {
   id: string;
@@ -263,7 +264,7 @@ export default function TicketsPage() {
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                 asChild
               >
-                <a href="/transactions">Get Espektro Pass</a>
+                <Link href="/transactions">Get Espektro Pass</Link>
               </Button>
             </div>
           )}

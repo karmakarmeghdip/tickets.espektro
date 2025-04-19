@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Facebook, Youtube } from 'lucide-react';
+import Link from 'next/link';
 // Update the path below if the actual location is different
 import { TextHoverEffect } from '../ui/text-hover-effect';
 import Image from 'next/image';
@@ -51,21 +52,21 @@ export default function Footer() {
                     <div className="my-6 md:my-0">
                         <h3 className="text-center mb-4 text-purple-400">Follow us on</h3>
                         <div className="flex justify-center space-x-6">
-                            <a href="https://www.instagram.com/espektro_kgec" className="text-gray-300 hover:text-purple-400 transition-colors">
+                            <Link href="https://www.instagram.com/espektro_kgec" className="text-gray-300 hover:text-purple-400 transition-colors">
                                 <Instagram size={24} />
-                            </a>
-                            <a href="https://www.facebook.com/espektrokgec" className="text-gray-300 hover:text-purple-400 transition-colors">
+                            </Link>
+                            <Link href="https://www.facebook.com/espektrokgec" className="text-gray-300 hover:text-purple-400 transition-colors">
                                 <Facebook size={24} />
-                            </a>
-                            <a href="https://www.youtube.com/@EspektroKGEC" className="text-gray-300 hover:text-purple-400 transition-colors">
+                            </Link>
+                            <Link href="https://www.youtube.com/@EspektroKGEC" className="text-gray-300 hover:text-purple-400 transition-colors">
                                 <Youtube size={24} />
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
-                    <a href="#" className="text-gray-300 hover:text-purple-400 transition-colors">
+                    <Link href="#" className="text-gray-300 hover:text-purple-400 transition-colors">
                         Event Brochure
-                    </a>
+                    </Link>
                 </div>
             </div>
         </footer>
