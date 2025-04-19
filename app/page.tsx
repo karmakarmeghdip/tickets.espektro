@@ -24,20 +24,20 @@ export default function Home() {
             squaresClassName="stroke-gray-400/30 dark:stroke-gray-600/30"
           />
         </div>
-        
+
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-4xl">
             <AuroraText className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
               Espektro 2025
             </AuroraText>
             <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8">
-              The Annual Techno Management cum Cultural fest of <br/>Kalyani Government Engineering College
+              The Annual Techno Management cum Cultural fest of <br />Kalyani Government Engineering College
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
-              Join us for an incredible journey of technology, innovation, and creativity. 
+              Join us for an incredible journey of technology, innovation, and creativity.
               Experience workshops, competitions, cultural performances, and more.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 items-center">
               <Link href="/transactions">
                 <InteractiveHoverButton
@@ -46,7 +46,7 @@ export default function Home() {
                   Get Espektro Pass
                 </InteractiveHoverButton>
               </Link>
-              
+
               <Link href="/events">
                 <Button variant="outline" className="px-6 py-6 text-lg rounded-xl border-2">
                   Explore Events
@@ -56,7 +56,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Events Section */}
       <section className="py-16 bg-gray-50 dark:bg-slate-950">
         <div className="container mx-auto px-4">
@@ -71,7 +71,7 @@ export default function Home() {
                 Don&apos;t miss out on these exciting events at Espektro 2025
               </p>
             </div>
-            
+
             <Link href="/events">
               <Button variant="ghost" className="mt-4 md:mt-0">
                 View All Events
@@ -79,18 +79,18 @@ export default function Home() {
               </Button>
             </Link>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {events.slice(0, 6).map((event) => (
-              <EventCard 
-                key={event.id} 
+              <EventCard
+                key={event.id}
                 event={event} // Pass the whole event object
               />
             ))}
           </div>
         </div>
       </section>
-      
+
       {/* Timeline Section */}
       <section className="py-16 bg-gray-50 dark:bg-slate-950"> {/* Updated background color */}
         <div className="container mx-auto px-4">
@@ -103,10 +103,10 @@ export default function Home() {
             <p className="text-gray-600 dark:text-gray-400 text-center mb-8">
               Plan your Espektro experience with our event timeline
             </p>
-            
+
             <EventTimeline events={events} />
           </div>
-          
+
           <div className="flex justify-center mt-12">
             <Link href="/transactions">
               <Button className="text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-6 py-3 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all">
@@ -117,7 +117,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4">
@@ -125,11 +125,11 @@ export default function Home() {
             <div className="max-w-xl mb-8 md:mb-0">
               <h2 className="text-3xl font-bold mb-4">Ready for an unforgettable experience?</h2>
               <p className="text-white/80">
-                Get your Espektro Pass today and gain access to all events during the fest. 
+                Get your Espektro Pass today and gain access to all events during the fest.
                 Be part of the biggest techfest in the region!
               </p>
             </div>
-            
+
             <Link href="/transactions">
               <Button className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all">
                 Get Espektro Pass for ₹1700
