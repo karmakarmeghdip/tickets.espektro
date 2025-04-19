@@ -1,62 +1,58 @@
 # Espektro Tickets - Digital Ticketing Platform
 
-This project is a modern, web-based ticketing platform built with [Next.js](https://nextjs.org), designed to streamline and digitalize the entire event ticketing process.
+This project is a modern, web-based ticketing platform built with [Next.js](https://nextjs.org) and [Drizzle ORM](https://orm.drizzle.team/), designed to streamline and digitalize the entire event ticketing process for college events.
 
-## The Need for Digitalization
+## Project Overview
 
-Traditional paper-based ticketing systems often suffer from inefficiencies, potential for fraud, and inconvenience for both organizers and attendees. Manual processes can lead to long queues, lost tickets, and difficulties in tracking attendance accurately. Espektro Tickets aims to solve these problems by providing a fully digital solution.
+Espektro Tickets is a comprehensive digital ticketing solution designed specifically for educational institutions to manage events, track attendance, and handle ticket sales. The platform provides different user experiences based on the type of user (student, alumni, or visitor) and includes a powerful admin dashboard for event management.
+
+## Tech Stack
+
+- **Frontend**: Next.js, React, TailwindCSS, shadcn/ui
+- **Backend**: Next.js API routes
+- **Database**: SQLite with Drizzle ORM
+- **Authentication**: NextAuth.js
+- **UI/UX**: Framer Motion, Lucide Icons
 
 ## Features
 
-*   **Event Discovery:** Browse upcoming events with detailed descriptions, dates, and venues.
-*   **Secure User Authentication:** Easy and secure login/signup process for attendees.
-*   **Digital Ticket Purchase:** Seamless online ticket purchasing experience.
-*   **QR Code Generation:** Each ticket is issued with a unique QR code for secure validation.
-*   **Admin Dashboard:**
-    *   Event Management: Create, update, and manage event details.
-    *   Attendance Tracking: Real-time monitoring of attendee check-ins.
-    *   QR Code Scanning: Integrated QR scanner for quick and reliable ticket validation at the venue entrance.
-*   **Responsive Design:** Fully accessible on desktops, tablets, and mobile devices.
+### User-Facing Features
+*   **Event Discovery:** Browse upcoming events with detailed descriptions, dates, and venues
+*   **User Authentication:** Secure login/signup process with role-based access
+*   **User Profiles:** Specialized profiles for students, alumni, and visitors
+*   **Digital Ticket Purchase:** Seamless online ticket purchasing with payment processing
+*   **QR Code Generation:** Unique QR code for each ticket for secure validation
+*   **Mobile-Responsive Design:** Fully accessible on all devices
+
+### Admin Dashboard Features
+*   **Overview Analytics:** Real-time statistics and metrics for events, attendees, and revenue
+*   **Event Management:** Create, update, and manage events with multiple coordinators
+*   **Ticket Management:** Configure ticket types, prices, and availability
+*   **QR Code Scanning:** Built-in scanner for validating attendee tickets at entry points
+*   **Attendance Tracking:** Monitor check-ins and attendance in real-time
+*   **Transaction History:** Track all payment transactions with detailed records
+*   **Role-Based Access Control:** Manage admin permissions and role assignments
+*   **Discount Code Management:** Create and manage promotional codes for ticket purchases
+
+## Database Structure
+
+The platform uses a relational database with the following core schemas:
+
+- **User Management:** Authentication and user profiles for different types of users (students, alumni, visitors)
+- **Event Management:** Events, categories, and coordinators
+- **Ticket System:** Ticket types, purchased tickets, and discount codes
+- **Payment Processing:** Transactions, payment details, and refund management
+- **Role System:** Role-based permissions for admin users
+- **Attendance Tracking:** Check-ins, access logs, and temporary QR codes
+
+## Project Status
+
+This project is currently under active development. Core features of the admin dashboard and database schemas have been implemented, while user-facing features are being developed.
 
 ## Benefits
 
-*   **Convenience:** Attendees can purchase and manage tickets from anywhere, anytime.
-*   **Security:** Reduces ticket fraud through unique QR codes and secure validation.
-*   **Efficiency:** Speeds up the check-in process and reduces administrative overhead for organizers.
-*   **Sustainability:** Eliminates the need for paper tickets, contributing to environmental conservation.
-*   **Data Insights:** Provides organizers with valuable data on sales and attendance.
-
-## Getting Started
-
-First, ensure you have Node.js and bun installed. Then, install the dependencies:
-
-```bash
-bun install
-```
-
-Next, run the development server:
-
-```bash
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*   **Convenience:** Attendees can purchase and manage tickets from anywhere, anytime
+*   **Security:** Reduces ticket fraud through unique QR codes and secure validation
+*   **Efficiency:** Speeds up the check-in process and reduces administrative overhead for organizers
+*   **Data Insights:** Provides organizers with valuable analytics on sales and attendance patterns
+*   **Sustainability:** Eliminates the need for paper tickets, contributing to environmental conservation

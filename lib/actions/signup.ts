@@ -10,7 +10,8 @@ import {
   alumniProfile,
   visitorProfile
 } from "@/lib/db/user-schema";
-import { authClient } from "../auth-client";
+import { auth } from "../auth";
+import { headers } from "next/headers";
 
 // Define the signup schema with Zod - removed email and password
 const signupSchema = z
@@ -83,10 +84,11 @@ const signupSchema = z
 type SignupFormData = z.infer<typeof signupSchema>;
 
 export async function signup(formData: FormData) {
-  const { data: session, error } = await authClient.getSession();
-  if (error) {
-    console.error("Error fetching session:", error);
-    return { success: false, message: "Session error: " + error.message };
+  const session = await auth.api.getSession({
+    headers: await headers()
+  });
+  if (!session) {
+    return { success: false, message: "User not authenticated" };
   }
   try {
     // Extract form data into a plain object

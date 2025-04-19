@@ -118,7 +118,7 @@ export default function AdminDashboard() {
 
     const adminSession = localStorage.getItem("adminSession");
     if (!adminSession) {
-      router.push("/admin/login");
+      // router.push("/admin/login");
       return;
     }
 
