@@ -23,7 +23,7 @@ export default function TransactionsPage() {
               Kalyani Government Engineering College&apos;s annual techfest
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left column - Event details and timeline */}
             <div className="lg:col-span-2 space-y-8">
@@ -46,14 +46,71 @@ export default function TransactionsPage() {
                     students to showcase their talents and innovations.
                   </p>
                 </div>
-                
+
+                {/* Payment details */}
+                <div className="bg-white dark:bg-slate-900 rounded-xl shadow-lg overflow-hidden block sm:hidden">
+                  <div className="p-6">
+                    <h2 className="text-2xl font-bold mb-4 flex items-center">
+                      <CreditCard className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" />
+                      Pass Details
+                    </h2>
+                    <div className="mb-6">
+                      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-4">
+                        <h3 className="text-xl font-bold mb-2">Espektro Full Access Pass</h3>
+                        <p className="text-gray-700 dark:text-gray-300 mb-2">
+                          Get access to all events during Espektro 2025
+                        </p>
+                        <ul className="space-y-1 mb-4 text-gray-600 dark:text-gray-400">
+                          <li className="flex items-center">
+                            <svg className="h-4 w-4 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Entry to all technical events
+                          </li>
+                          <li className="flex items-center">
+                            <svg className="h-4 w-4 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Entry to all cultural events
+                          </li>
+                          <li className="flex items-center">
+                            <svg className="h-4 w-4 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Espektro merchandise kit
+                          </li>
+                          <li className="flex items-center">
+                            <svg className="h-4 w-4 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Certificate of participation
+                          </li>
+                        </ul>
+                        <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                          ₹1,700
+                        </div>
+                      </div>
+                    </div>
+
+                    <Button
+                      onClick={() => {
+                        // In a real app, this would redirect to the payment gateway
+                        alert("This would redirect to Razorpay in a real application");
+                      }}
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-6 text-lg"
+                    >
+                      Buy Now
+                    </Button>
+                  </div>
+                </div>
+
                 {/* Event timeline */}
                 <div className="p-6 border-t dark:border-gray-800">
                   <h2 className="text-2xl font-bold mb-4">Event Schedule</h2>
                   <EventTimeline events={events} />
                 </div>
               </div>
-              
+
               {/* Travel guide */}
               <div className="bg-white dark:bg-slate-900 rounded-xl shadow-lg overflow-hidden">
                 <div className="p-6">
@@ -69,7 +126,7 @@ export default function TransactionsPage() {
                         Here are the different ways to reach the college:
                       </p>
                     </div>
-                    
+
                     <div>
                       <h4 className="font-semibold mb-1">By Train</h4>
                       <p className="text-gray-700 dark:text-gray-300 pl-4">
@@ -77,7 +134,7 @@ export default function TransactionsPage() {
                         - From Kalyani Station: Take an auto or bus to KGEC (15 minutes)
                       </p>
                     </div>
-                    
+
                     <div>
                       <h4 className="font-semibold mb-1">By Bus</h4>
                       <p className="text-gray-700 dark:text-gray-300 pl-4">
@@ -85,7 +142,7 @@ export default function TransactionsPage() {
                         - From Kalyani Bus Stand: Take an auto or bus to KGEC (15 minutes)
                       </p>
                     </div>
-                    
+
                     <div>
                       <h4 className="font-semibold mb-1">By Car</h4>
                       <p className="text-gray-700 dark:text-gray-300 pl-4">
@@ -93,7 +150,7 @@ export default function TransactionsPage() {
                         - Use GPS navigation to reach &quot;Kalyani Government Engineering College&quot;
                       </p>
                     </div>
-                    
+
                     <div>
                       <h4 className="font-semibold mb-1">Accommodation</h4>
                       <p className="text-gray-700 dark:text-gray-300 pl-4">
@@ -105,7 +162,7 @@ export default function TransactionsPage() {
                 </div>
               </div>
             </div>
-            
+
             {/* Right column - Map view and payment */}
             <div className="space-y-8">
               {/* Map */}
@@ -126,7 +183,7 @@ export default function TransactionsPage() {
                     ></iframe>
                   </div>
                   <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-                    <a 
+                    <a
                       href="https://maps.app.goo.gl/B2YcBmng8R6N9LVGA"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -137,9 +194,9 @@ export default function TransactionsPage() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Payment details */}
-              <div className="bg-white dark:bg-slate-900 rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-white dark:bg-slate-900 rounded-xl shadow-lg overflow-hidden hidden sm:block">
                 <div className="p-6">
                   <h2 className="text-2xl font-bold mb-4 flex items-center">
                     <CreditCard className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" />
@@ -182,7 +239,7 @@ export default function TransactionsPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <Button
                     onClick={() => {
                       // In a real app, this would redirect to the payment gateway
@@ -194,7 +251,7 @@ export default function TransactionsPage() {
                   </Button>
                 </div>
               </div>
-              
+
               {/* Terms and conditions */}
               <div className="bg-white dark:bg-slate-900 rounded-xl shadow-lg overflow-hidden">
                 <div className="p-6">
